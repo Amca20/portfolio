@@ -227,6 +227,29 @@
       transform: translateX(5px);
     }
 
+    /* Divider between sections */
+    .section-divider {
+      width: 100%;
+      max-width: 900px;
+      margin: 3rem auto 3rem auto;
+      border: none;
+      border-top: 2.5px solid #e5eaf5;
+      position: relative;
+      height: 0;
+    }
+    .section-divider::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -7px;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 5px;
+      background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
+      border-radius: 3px;
+    }
+
     @media (max-width: 768px) {
       nav {
         padding: 1rem 1rem;
@@ -358,6 +381,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Divider between Projects and Contact -->
+  <div class="section-divider"></div>
 
   <!-- Add contact section at the end of the page -->
   <section class="contact-section" style="padding:3rem 0 2rem 0;">
