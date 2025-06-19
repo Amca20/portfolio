@@ -206,26 +206,34 @@
     }
 
     .project-link {
-      display: inline-block;
-      color: var(--secondary);
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 1rem;
-      transition: color 0.3s;
-    }
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
 
-    .project-link:hover {
-      color: var(--primary);
-    }
+  .project-link:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 
-    .project-link i {
-      margin-left: 0.5rem;
-      transition: transform 0.3s;
-    }
+  .project-link i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+  }
 
-    .project-link:hover i {
-      transform: translateX(5px);
-    }
+  .project-link:hover i {
+    transform: translateX(3px);
+  }
 
     /* Divider between sections */
     .section-divider {
