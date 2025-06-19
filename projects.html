@@ -152,6 +152,20 @@
       transition: transform 0.3s ease;
       opacity: 0;
       transform: translateY(40px);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card-inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-info {
+      flex: 1 1 auto;
+      padding: 1.5rem;
     }
 
     .project-card.visible {
@@ -180,15 +194,6 @@
       box-shadow: 0 10px 32px rgba(59,130,246,0.13);
     }
 
-    .project-info {
-      padding: 1.5rem;
-    }
-
-    .project-info h3 {
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-    }
-
     .project-tech {
       display: flex;
       flex-wrap: wrap;
@@ -206,34 +211,27 @@
     }
 
     .project-link {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--secondary);
-    color: white;
-    font-weight: 600;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    margin-top: 1.5rem;
-  }
+      display: inline-block;
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 1.5rem 1.5rem 1.5rem;
+      align-self: flex-start;
+      transition: color 0.3s;
+    }
 
-  .project-link:hover {
-    background-color: var(--primary);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
+    .project-link:hover {
+      color: var(--primary);
+    }
 
-  .project-link i {
-    margin-left: 0.5rem;
-    transition: transform 0.3s;
-  }
+    .project-link i {
+      margin-left: 0.5rem;
+      transition: transform 0.3s;
+    }
 
-  .project-link:hover i {
-    transform: translateX(3px);
-  }
+    .project-link:hover i {
+      transform: translateX(5px);
+    }
 
     /* Divider between sections */
     .section-divider {
@@ -241,7 +239,7 @@
       max-width: 900px;
       margin: 3rem auto 3rem auto;
       border: none;
-      border-top: 4px solid #e5eaf5;
+      border-top: 2.5px solid #e5eaf5;
       position: relative;
       height: 0;
     }
@@ -253,7 +251,7 @@
       top: -7px;
       transform: translateX(-50%);
       width: 60px;
-      height: 10px;
+      height: 5px;
       background: linear-gradient(90deg, #3b82f6 0%, #1e40af 100%);
       border-radius: 3px;
     }
@@ -276,6 +274,9 @@
       }
       .burger {
         display: block;
+      }
+      .project-link {
+        margin: 0 1rem 1rem 1rem;
       }
     }
   </style>
@@ -309,78 +310,88 @@
 
         <!-- Cinema Booking System -->
         <div class="project-card">
-          <img src="images/Screenshot-simpleMovieTicketBookingSystem.png" alt="Cinema Booking System">
-          <div class="project-info">
-            <h3>Cinema Booking System</h3>
-            <p>A console-based C++ program that manages seat booking, movie schedules, and ticket pricing using object-oriented programming.</p>
-            <div class="project-tech">
-              <span>C++</span>
-              <span>OOP</span>
-              <span>File Handling</span>
-              <span>Console App</span>
+          <div class="project-card-inner">
+            <img src="images/Screenshot-simpleMovieTicketBookingSystem.png" alt="Cinema Booking System">
+            <div class="project-info">
+              <h3>Cinema Booking System</h3>
+              <p>A console-based C++ program that manages seat booking, movie schedules, and ticket pricing using object-oriented programming.</p>
+              <div class="project-tech">
+                <span>C++</span>
+                <span>OOP</span>
+                <span>File Handling</span>
+                <span>Console App</span>
+              </div>
             </div>
-           <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Restaurant Order System -->
         <div class="project-card">
-          <img src="images/restaurant.jpg" alt="Restaurant Order System">
-          <div class="project-info">
-            <h3>Restaurant Order System</h3>
-            <p>A desktop Java application that allows restaurant staff to manage orders, generate bills, and keep track of menu items efficiently.</p>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>GUI</span>
-              <span>OOP</span>
-              <span>NetBeans</span>
+          <div class="project-card-inner">
+            <img src="images/restaurant.jpg" alt="Restaurant Order System">
+            <div class="project-info">
+              <h3>Restaurant Order System</h3>
+              <p>A desktop Java application that allows restaurant staff to manage orders, generate bills, and keep track of menu items efficiently.</p>
+              <div class="project-tech">
+                <span>Java</span>
+                <span>GUI</span>
+                <span>OOP</span>
+                <span>NetBeans</span>
+              </div>
             </div>
-          <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Calories Burn Prediction -->
         <div class="project-card">
-          <img src="images/ML.jpg" alt="Calories Burn Prediction">
-          <div class="project-info">
-            <h3>Calories Burn Prediction</h3>
-            <p>Machine learning model that predicts calories burned during jogging activities based on biometric and movement data.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Scikit-learn</span>
-              <span>Pandas</span>
-              <span>Matplotlib</span>
+          <div class="project-card-inner">
+            <img src="images/ML.jpg" alt="Calories Burn Prediction">
+            <div class="project-info">
+              <h3>Calories Burn Prediction</h3>
+              <p>Machine learning model that predicts calories burned during jogging activities based on biometric and movement data.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+              </div>
             </div>
-           <a href="#" class="project-link">View Details<i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Smart Spa Management System -->
         <div class="project-card">
-          <img src="images/Screenshot 2025-06-19 014517.png" alt="Smart Spa Management System">
-          <div class="project-info">
-            <h3>Smart Spa Management System</h3>
-            <p>A C++ system for managing spa services including customer records, appointment schedules, and inventory using file handling and classes.</p>
-            <div class="project-tech">
-              <span>C++</span>
-              <span>OOP</span>
-              <span>File Handling</span>
+          <div class="project-card-inner">
+            <img src="images/Screenshot 2025-06-19 014517.png" alt="Smart Spa Management System">
+            <div class="project-info">
+              <h3>Smart Spa Management System</h3>
+              <p>A C++ system for managing spa services including customer records, appointment schedules, and inventory using file handling and classes.</p>
+              <div class="project-tech">
+                <span>C++</span>
+                <span>OOP</span>
+                <span>File Handling</span>
+              </div>
             </div>
-           <a href="#" class="project-link">View Details<i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- House Price Prediction -->
         <div class="project-card">
-          <img src="images/Screenshot 2025-06-19 014340.png" alt="House Price Prediction">
-          <div class="project-info">
-            <h3>House Price Prediction</h3>
-            <p>A neural network model built using Python to predict real estate prices based on housing features with 92% accuracy.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>Neural Networks</span>
-              <span>NumPy</span>
+          <div class="project-card-inner">
+            <img src="images/Screenshot 2025-06-19 014340.png" alt="House Price Prediction">
+            <div class="project-info">
+              <h3>House Price Prediction</h3>
+              <p>A neural network model built using Python to predict real estate prices based on housing features with 92% accuracy.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>Neural Networks</span>
+                <span>NumPy</span>
+              </div>
             </div>
             <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
