@@ -326,6 +326,30 @@
             color: #fbbf24;
         }
         
+        /* Section Divider - Three Lines */
+        .section-divider-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin: 3rem auto 3rem auto;
+            height: 12px;
+        }
+        .section-divider-3 .line {
+            height: 5px;
+            width: 48px;
+            border-radius: 3px;
+        }
+        .section-divider-3 .line1 {
+            background: var(--accent);
+        }
+        .section-divider-3 .line2 {
+            background: var(--secondary);
+        }
+        .section-divider-3 .line3 {
+            background: var(--accent);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -424,6 +448,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Divider between Profile and Personal Qualities -->
+            <div class="section-divider-3">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
             
             <div class="qualities-section">
                 <div class="section-header">
@@ -473,7 +504,12 @@
                 </div>
             </div>
             
-            <div class="section-divider"></div>
+            <!-- Divider between Personal Qualities and Technical Competencies -->
+            <div class="section-divider-3">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
             
             <div class="skills-section">
                 <div class="section-header">
